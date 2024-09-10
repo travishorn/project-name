@@ -17,7 +17,7 @@
   ],
   "exports": "./src/index.js",
   "bin": {
-    "project-name": "./src/cli.js"
+    "project-name": "src/cli.js"
   },
   "repository": {
     "type": "git",
