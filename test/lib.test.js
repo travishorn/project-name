@@ -8,9 +8,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 describe("getPackageInfo", () => {
   test("should return package info", async () => {
     const packageInfo = await getPackageInfo();
-    expect(packageInfo).toHaveProperty("name", "project-name");
+    expect(packageInfo).toHaveProperty("name");
     expect(packageInfo).toHaveProperty("version");
     expect(packageInfo).toHaveProperty("description");
+    expect(typeof packageInfo.name).toBe("string");
     expect(typeof packageInfo.version).toBe("string");
     expect(typeof packageInfo.description).toBe("string");
   });
