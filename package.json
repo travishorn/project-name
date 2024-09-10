@@ -1,0 +1,49 @@
+{
+  "name": "@travishorn/project-name",
+  "version": "0.1.0",
+  "description": "Tools for working with project names.",
+  "keywords": [
+    "random",
+    "project",
+    "name",
+    "generator"
+  ],
+  "homepage": "https://github.com/travishorn/project-name",
+  "bugs": "https://github.com/travishorn/project-name/issues",
+  "license": "MIT",
+  "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
+  "files": [
+    "src"
+  ],
+  "exports": "./src/index.js",
+  "bin": {
+    "project-name": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travishorn/project-name.git"
+  },
+  "scripts": {
+    "test": "vitest",
+    "start": "node src/cli.js",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run format && npm run lint && npm run test -- run"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "type": "module"
+}
