@@ -11,7 +11,7 @@ export async function getPackageInfo() {
     const data = await readFile(packageJsonPath, "utf8");
     const packageJson = JSON.parse(data);
     return {
-      name: packageJson.name,
+      name: packageJson.name.split("/")[1] ?? packageJson.name,
       version: packageJson.version,
       description: packageJson.description,
     };

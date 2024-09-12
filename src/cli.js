@@ -7,7 +7,7 @@ import { generate } from "./index.js";
 const { name, version, description } = await getPackageInfo();
 
 const program = new Command()
-  .name(name.split("/")[1])
+  .name(name)
   .description(description)
   .version(version);
 
